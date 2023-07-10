@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Query form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(45deg, #FC466B, #3F5EFB);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .container {
+      width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      background:linear-gradient(45deg, #3F5EFB, #FC466B);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      animation: fade-in 1s ease;
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ffffff;
+      font-size: 32px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      animation: slide-up 0.5s ease;
+    }
+
+    @keyframes slide-up {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #ffffff;
+      font-size: 16px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 95%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      outline: none;
+    }
+
+    .form-group textarea {
+      width: 95%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      resize: vertical;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group textarea:focus {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      outline: none;
+    }
+
+    .form-group button {
+      padding: 10px 16px;
+      background-color:#FC466B;
+      border: none;
+      color: #ffffff;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group button:hover {
+      background-color: blue;
+    }
+
+    .form-group .optional {
+      color: #ffffff;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Raise Issue</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>      
+      <div class="form-group">
+        <label for="issue">Issue:</label>
+        <select id="issue" name="issue" required>
+          <option value="" selected disabled>Select an issue</option>
+          <option value="General Inquiry">General Inquiry</option>
+          <option value="Technical Support">Technical Support</option>
+          <option value="Billing">Billing</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+   </form>
+  </div>
+</body>
+</html>
